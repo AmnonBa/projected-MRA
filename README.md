@@ -100,7 +100,7 @@ The main script checks that `lsqnonlin` is available before running.
 From the repository root, run:
 
 ```matlab
-compare_projected_mra_four_methods_lsqnonlin_runtime_normalized
+compare_projected_mra
 ```
 
 The main script adds the helper folders to the MATLAB path. If you run individual functions manually, make sure the relevant folders are on the MATLAB path.
@@ -140,20 +140,6 @@ The script prints summaries for each noise level and final tables for:
 If `makePlots = true`, the script also generates plots for reconstruction error, MSE, success probability, runtime, iteration count, and moment-noise diagnostics.
 
 If `savePlots = true`, figures are saved to the folder specified by:
-
-```matlab
-plotFolder = 'projected_mra_four_method_lsqnonlin_results';
-```
-
-## Notes on Runtime Normalization
-
-In addition to raw runtime, the script computes a normalized runtime by multiplying the number of iterations by a reference time-per-iteration. The reference time-per-iteration is estimated from the first few noise levels, controlled by:
-
-```matlab
-runtimeCalibNumSigmas = 3;
-```
-
-This is intended to separate iteration-count effects from long-run runtime fluctuations.
 
 ## Numerical Diagnostics
 
