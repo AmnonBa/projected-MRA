@@ -1,0 +1,6 @@
+function v = col_nanmedian(X)
+    v = zeros(size(X,1),1);
+    for i = 1:size(X,1)
+        v(i) = nanmedian_local(X(i,:));
+    end
+end
